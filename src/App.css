@@ -1,0 +1,37 @@
+#appDiv {
+    display:flex;
+    flex-direction: column;
+}
+.recordBox {
+    background-color: rgb(202, 196, 196);
+    border-bottom:solid 1px rgb(119, 20, 20);
+}
+#tableHeader {
+    display:flex;
+    align-items:center;
+    padding:0.5rem 0.6rem 0.5rem 1rem;
+    background-color: rgb(0, 0, 128);
+    color:white;
+    margin:0 2px 0 2px;
+}
+#thead {
+    background-color: rgb(46, 60, 151);
+    color:white;
+}
+.val1Box, .val2Box, .val3Box {
+    color:black;
+    padding:0.5rem;
+}
+#refreshButton {
+    margin-left:auto;   
+    cursor:pointer;
+    background-color: rgb(0, 0, 128);
+    border:none;
+    transition: all 0.2s ease-in-out;
+}
+#refreshButton:hover {
+    transform:scale(1.05);
+}
+#refreshIMG {
+    max-width:30px;
+}
