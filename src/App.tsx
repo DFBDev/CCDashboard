@@ -55,7 +55,7 @@ function App() {
       <div id="tableHeader">
         TSDashboard
         <button id="refreshButton">
-          <img id='refreshIMG' src="src/assets/refresh.png"></img>
+          <img id='refreshIMG' src="./refresh.png"></img>
         </button>
       </div>
       <table id='dataTable'>
