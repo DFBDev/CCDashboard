@@ -15,7 +15,7 @@ function App() {
       resultsContainer?.appendChild(preloaderText);
   
       //Sending GET request.
-      const res = await fetch("https://ts-be.onrender.com/test/get", {method: "GET"});
+      const res = await fetch("https://ts-be.onrender.com/actions/DLS2a&l@azLq52&OSE0i", {method: "GET"});
       const resBody = await res.json();
 
       //Removing preload text once response is received.
@@ -44,6 +44,9 @@ function App() {
       }
   }
   useEffect(() => {
+    if (localStorage.getItem("authKey") != "st5fra0*-$ra*u7rlW0_de6orap#ls=") {
+      window.location.replace("https://dfbdev.github.io/TSD_Login/");
+    }
     const refreshButton: HTMLElement | null = document.querySelector("#refreshButton");
     loadData();
     refreshButton?.addEventListener("click", () => {
