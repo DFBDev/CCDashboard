@@ -37,8 +37,8 @@ function App() {
         val1Element.appendChild(val1TextNode);
         val2Element.appendChild(val2TextNode);
         val3Element.appendChild(val3TextNode);
-        recordBox?.appendChild(val2Element);
         recordBox?.appendChild(val1Element);
+        recordBox?.appendChild(val2Element);
         recordBox?.appendChild(val3Element);
         resultsContainer?.appendChild(recordBox);
       }
