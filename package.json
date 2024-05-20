@@ -1,6 +1,6 @@
 {
-  "homepage": "https://dfbdev.github.io/TSDashboard/",
-  "name": "tsdashboard",
+  "homepage": "https://dfbdev.github.io/CCDashboard/",
+  "name": "ccdashboard",
   "private": true,
   "version": "0.0.0",
   "type": "module",
