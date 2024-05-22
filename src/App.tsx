@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 function App() {
   async function loadData () {
       const resultsContainer: HTMLElement | null = document.querySelector("#tbody");
+      const authKey: string | null = sessionStorage.getItem("authKey");
 
       //Clearing any content currently in resultsContainer.
       if (resultsContainer?.hasChildNodes) {
@@ -15,7 +16,7 @@ function App() {
       resultsContainer?.appendChild(preloaderText);
   
       //Sending GET request.
-      const res = await fetch("https://ts-be.onrender.com/actions/DLS2a&l@azLq52&OSE0i", {method: "GET"});
+      const res = await fetch("https://ts-be.onrender.com/actions/DLS2a&l@azLq52&OSE0i", {method: "GET", headers: {"Authorization": authKey!}});
       const resBody = await res.json();
 
       //Removing preload text once response is received.
