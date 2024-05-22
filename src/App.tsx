@@ -46,7 +46,7 @@ function App() {
   }
   useEffect(() => {
     if (sessionStorage.getItem("authKey") != "st5fra0*-$ra*u7rlW0_de6orap#ls=") {
-      window.location.replace("https://dfbdev.github.io/TSD_Login/");
+      window.location.replace("https://dfbdev.github.io/CCDL/");
     }
     const refreshButton: HTMLElement | null = document.querySelector("#refreshButton");
     loadData();
