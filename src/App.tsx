@@ -28,19 +28,39 @@ function App() {
         const val1Element: HTMLElement | null = document.createElement("td");
         const val2Element: HTMLElement | null = document.createElement("td");
         const val3Element: HTMLElement | null = document.createElement("td");
+        const val4Element: HTMLElement | null = document.createElement("td");
+        const val5Element: HTMLElement | null = document.createElement("td");
+        const val6Element: HTMLElement | null = document.createElement("td");
+        const val7Element: HTMLElement | null = document.createElement("td");
         const val1TextNode: Text | null = document.createTextNode(resBody[i].value1);
         const val2TextNode: Text | null = document.createTextNode(resBody[i].value2);
         const val3TextNode: Text | null = document.createTextNode(resBody[i].value3);
+        const val4TextNode: Text | null = document.createTextNode(resBody[i].value4);
+        const val5TextNode: Text | null = document.createTextNode(resBody[i].value5);
+        const val6TextNode: Text | null = document.createTextNode(resBody[i].value6);
+        const val7TextNode: Text | null = document.createTextNode(resBody[i].value7);
         recordBox.setAttribute("class", "recordBox");
         val1Element.setAttribute("class", "val1Box");
         val2Element.setAttribute("class", "val2Box");
         val3Element.setAttribute("class", "val3Box");
+        val4Element.setAttribute("class", "val4Box");
+        val5Element.setAttribute("class", "val5Box");
+        val6Element.setAttribute("class", "val6Box");
+        val7Element.setAttribute("class", "val7Box");
         val1Element.appendChild(val1TextNode);
         val2Element.appendChild(val2TextNode);
         val3Element.appendChild(val3TextNode);
+        val4Element.appendChild(val4TextNode);
+        val5Element.appendChild(val5TextNode);
+        val6Element.appendChild(val6TextNode);
+        val7Element.appendChild(val7TextNode);
         recordBox?.appendChild(val1Element);
         recordBox?.appendChild(val2Element);
         recordBox?.appendChild(val3Element);
+        recordBox?.appendChild(val4Element);
+        recordBox?.appendChild(val5Element);
+        recordBox?.appendChild(val6Element);
+        recordBox?.appendChild(val7Element);
         resultsContainer?.appendChild(recordBox);
       }
   }
@@ -67,7 +87,11 @@ function App() {
           <tr>
             <th>Last Name</th>
             <th>First Name</th>
-            <th>Problem Description</th>
+            <th>Dial Count</th>
+            <th>Conversation Count</th>
+            <th>Appointments Set</th>
+            <th>Appointments Complete</th>
+            <th>Time Stamp</th>
           </tr>
         </thead>
         <tbody id="tbody">
