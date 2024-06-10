@@ -19,6 +19,9 @@ function App() {
       const res = await fetch("https://ts-be.onrender.com/actions/DLS2a&l@azLq52&OSE0i", {method: "GET", headers: {"Authorization": authKey!}});
       const resBody = await res.json();
 
+      if (resBody.status == "INVALID AUTHKEY") {
+        window.location.replace("https://dfbdev.github.io/CCDL/");
+      }
       //Removing preload text once response is received.
       resultsContainer?.removeChild(preloaderText);
       
@@ -65,9 +68,6 @@ function App() {
       }
   }
   useEffect(() => {
-    if (sessionStorage.getItem("authKey") != "st5fra0*-$ra*u7rlW0_de6orap#ls=") {
-      window.location.replace("https://dfbdev.github.io/CCDL/");
-    }
     const refreshButton: HTMLElement | null = document.querySelector("#refreshButton");
     loadData();
     refreshButton?.addEventListener("click", () => {
@@ -87,11 +87,11 @@ function App() {
           <tr>
             <th>Last Name</th>
             <th>First Name</th>
-            <th>Dial Count</th>
-            <th>Conversation Count</th>
-            <th>Appointments Set</th>
-            <th>Appointments Complete</th>
-            <th>Time Stamp</th>
+            <th>Dial #</th>
+            <th>Conv. #</th>
+            <th>Appt. Set</th>
+            <th>Appt. Complete</th>
+            <th>TS</th>
           </tr>
         </thead>
         <tbody id="tbody">
