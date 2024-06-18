@@ -77,7 +77,7 @@ function App() {
   return (
     <div id="appDiv">
       <div id="tableHeader">
-        TSDashboard
+        CCDashboard
         <button id="refreshButton">
           <img id='refreshIMG' src="./refresh.png"></img>
         </button>
